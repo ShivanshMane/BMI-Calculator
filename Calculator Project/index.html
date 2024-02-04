@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #3498db; /* Change background color */
+            color: #fff; /* Change text color */
+        }
+
+        h1 {
+            font-family: 'Verdana', sans-serif; /* Change font family */
+            font-size: 32px; /* Change font size */
+            color: #e74c3c; /* Change heading color */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .calculator-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #2ecc71; /* Change button color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #27ae60; /* Change button hover color */
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="calculator-container">
+            <div class="input-container">
+                <label for="height">Height (inches):</label>
+                <input type="number" id="height" placeholder="Enter height">
+            </div>
+            <div class="input-container">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight">
+            </div>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            
+            <div id="result"></div>
+
+            <div class="description">
+                <p><strong>How to use the BMI Calculator:</strong></p>
+                <p>1. Enter your height in inches in the "Height" field.</p>
+                <p>2. Enter your weight in kilograms in the "Weight" field.</p>
+                <p>3. Click the "Calculate BMI" button to get your BMI result.</p>
+                <p>4. The result will be displayed below, along with a classification (Underweight, Normal weight, Overweight, or Obese).</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; Shivansh Mane. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
